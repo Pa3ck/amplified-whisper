@@ -22,7 +22,7 @@ logging.getLogger("speechbrain.utils.parameter_transfer").setLevel(logging.WARNI
 login('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')
 
 
-sio = socketio.AsyncServer(async_mode='asgi', cors_allowed_origins=[])
+sio = socketio.AsyncServer(async_mode='asgi', cors_allowed_origins="*")
 app = socketio.ASGIApp(sio)
 # app = web.Application()
 # sio.attach(app)
@@ -67,4 +67,4 @@ async def send():
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
+    uvicorn.run(app, host='127.0.0.1', port=8080)

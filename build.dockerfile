@@ -33,7 +33,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose the port that the Flask app will use
-EXPOSE 8000
+EXPOSE 8080
 
 # Command to run the Flask app (using gunicorn for production)
-CMD ["gunicorn", "-w", "9", "-b", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker", "--timeout", "120", "server:app"]
+CMD ["gunicorn", "-w", "9", "-b", "0.0.0.0:8080", "-k", "uvicorn.workers.UvicornWorker", "--timeout", "120", "server:app"]
