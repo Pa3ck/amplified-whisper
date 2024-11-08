@@ -1,0 +1,5 @@
+diart
+python-socketio
+faster-whisper
+stable-ts
+uvicorn
